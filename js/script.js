@@ -1,26 +1,27 @@
-let btnAddTarefa = document.querySelector("#adicionar-tarefa");
-let inputTarefa = document.querySelector("#tarefa-digitada");
-let divTarefas = document.querySelector("#tarefas");
-console.log("Projeto To-do");
+let btnAddTarefa = document.querySelector('#adicionar-tarefa');
+let inputTarefa = document.querySelector('#tarefa-digitada');
+let divTarefas = document.querySelector('#tarefas');
+console.log('Projeto To-do');
 
 function addAcaoDeFinalizarTarefa() {
-  let listaDeBotoes = document.querySelectorAll(".botao-tarefa");
+  let listaDeBotoes = document.querySelectorAll('.botao-tarefa');
 
   for (let i = 0; i < listaDeBotoes.length; i++) {
     let botao = listaDeBotoes[i];
 
-    botao.addEventListener("click", function () {
+    botao.addEventListener('click', function () {
       if (window.confirm("Você tem certeza que quer excluir?")) {
         botao.parentElement.parentElement.remove();
       }
     });
   }
 }
-
+  
+  
 addAcaoDeFinalizarTarefa();
 function criarTarefa() {
-  if (inputTarefa.value.trim() == "") {
-    return alert("Você deve digitar uma tarefa primeiro");
+  if (inputTarefa.value.trim() == '') {
+    return alert('Você deve digitar uma tarefa primeiro');
   }
   let tarefa = `
   <div class="col-md-4 mb-4">
@@ -45,13 +46,13 @@ function criarTarefa() {
   // alert("Tarefa Criada: " + inputTarefa.value);
 
   //Limpando o input para nova tarefa
-  inputTarefa.value = "";
+  inputTarefa.value = '';
   addAcaoDeFinalizarTarefa();
 }
 
-btnAddTarefa.addEventListener("click", criarTarefa);
-inputTarefa.addEventListener("keypress", function (event) {
-  if (event.key == "Enter") {
+btnAddTarefa.addEventListener('click', criarTarefa);
+inputTarefa.addEventListener('keypress', function (event) {
+  if (event.key == 'Enter') {
     criarTarefa();
   }
 });
