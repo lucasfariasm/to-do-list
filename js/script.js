@@ -55,7 +55,6 @@ inputTarefa.addEventListener('keypress', function (event) {
     criarTarefa();
   }
 });
-balbalbalbka;
 // ## Após adicionar uma tarefa, o input deve ficar vazio para que venha uma nova tarefa
 
 // ## Se o usuário tentar adicionar uma tarefa vazia, dar um alerta dizendo que tem que digitar primeiro, e não pode deixar criar a tarefa vazia
