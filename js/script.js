@@ -6,6 +6,7 @@ console.log('Projeto To-do');
 function addAcaoDeFinalizarTarefa() {
   let listaDeBotoes = document.querySelectorAll('.botao-tarefa');
 
+
   for (let i = 0; i < listaDeBotoes.length; i++) {
     let botao = listaDeBotoes[i];
 
@@ -17,7 +18,7 @@ function addAcaoDeFinalizarTarefa() {
   }
 }
   
-  
+
 addAcaoDeFinalizarTarefa();
 function criarTarefa() {
   if (inputTarefa.value.trim() == '') {
